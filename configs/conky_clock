@@ -13,9 +13,9 @@ double_buffer yes
 
 #------------------------- Location
 minimum_size 600 120
-maximum_width 820
-gap_x 1100
-gap_y 645
+maximum_width 900
+gap_x 1050
+gap_y 745
 
 #------------------------- FONT
 use_xft yes
@@ -30,7 +30,7 @@ uppercase no
 alignment top_left
 
 #------------------------- Colors
-default_color DCDCDC 		#220 220 220	Gainsboro
+default_color C0C0C0	#220 220 220	Gainsboro
 color0 1793d0			#Special Color
 color1 DDDDDD			#Shades of grey
 color2 AAAAAA

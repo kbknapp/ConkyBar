@@ -15,7 +15,7 @@ double_buffer yes
 minimum_size 313 165
 maximum_width 313
 gap_x 313
-gap_y 150
+gap_y 50
 
 #------------------------- FONT
 use_xft yes
@@ -56,10 +56,11 @@ lua_draw_hook_pre main_graph
 
 TEXT
 ${voffset 25}${GOTO 50}${font}CPU
+${voffset 5}${GOTO 50}${font}Model: ${font Monofur:size=8}${exec lscpu | grep "Model name" | gawk -F: '{print $2}' | tail -c 24 | head -c 9}
 ${GOTO 50}${font}Avg use: ${font Monofur:size=8}${cpu cpu0}% ${GOTO 215}${font}Freq: ${font Monofur:size=8}${freq_g} Ghz
-${voffset 27}${GOTO 50}${font Monofur:size=8}${color0}${top name 1}${GOTO 200}${top cpu 1}%${GOTO 255}${top mem 1}%
-${GOTO 50}${font Monofur:size=8}${color1}${top name 2}${GOTO 200}${top cpu 2}%${GOTO 255}${top mem 2}%
-${GOTO 50}${font Monofur:size=8}${color2}${top name 3}${GOTO 200}${top cpu 3}%${GOTO 255}${top mem 3}%
-${GOTO 50}${font Monofur:size=8}${color3}${top name 4}${GOTO 200}${top cpu 4}%${GOTO 255}${top mem 4}%
-${GOTO 50}${font Monofur:size=8}${color3}${top name 5}${GOTO 200}${top cpu 5}%${GOTO 255}${top mem 5}%
+${voffset 17}${GOTO 50}${font Monofur:size=8}${color0}${top name 1}${GOTO 255}${top cpu 1}%
+${GOTO 50}${font Monofur:size=8}${color1}${top name 2}${GOTO 255}${top cpu 2}%
+${GOTO 50}${font Monofur:size=8}${color2}${top name 3}${GOTO 255}${top cpu 3}%
+${GOTO 50}${font Monofur:size=8}${color3}${top name 4}${GOTO 255}${top cpu 4}%
+${GOTO 50}${font Monofur:size=8}${color3}${top name 5}${GOTO 255}${top cpu 5}%
 ${image ~/.conkyconfig/img/cpu.png -p 0,15 -s 45x45}

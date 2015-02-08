@@ -14,8 +14,8 @@ double_buffer yes
 #------------------------- Location
 minimum_size 313 165
 maximum_width 313
-gap_x 1252
-gap_y 50
+gap_x 626
+gap_y 45
 
 #------------------------- FONT
 use_xft yes
@@ -29,7 +29,7 @@ uppercase no
 
 #------------------------- Colors
 default_color DCDCDC 		#220 220 220	Gainsboro
-color0 1793d0			 	#Special Color
+color0 1793d0				#Special Color
 color1 DDDDDD				#Shades of grey
 color2 AAAAAA
 color3 888888
@@ -42,7 +42,7 @@ border_inner_margin 0
 border_outer_margin 0
 border_width 0
 
-draw_graph_borders no
+default_bar_size 257 5
 
 #------------------------- OTHER
 text_buffer_size 256
@@ -51,16 +51,13 @@ background no
 use_spacer none
 update_interval 1
 
-#------------------------- LUA
-lua_load ~/.conkyconfig/lua/hdd_graph.lua
-lua_draw_hook_pre main_graph
-lua_load ~/.conkyconfig/lua/files_ring_clock.lua
-lua_draw_hook_post main
-
 TEXT
-${voffset 25}${GOTO 50}${font}File System
-${voffset 5}${GOTO 50}${font}Available: ${font Monofur:size=8}${color2}${fs_size /}
-${GOTO 50}${font}${color1}HDD: ${font Monofur:size=8}${color2}${fs_used /}${GOTO 200}${font}${color1}Temp: ${font Monofur:size=8}${color2}${hddtemp /dev/sda} °C
-${voffset 55}
-${GOTO 50}${font}Read: ${font Monofur:size=8}${diskio_read}${GOTO 200}${font}Write: ${font Monofur:size=8}${diskio_write}
-${image ~/.conkyconfig/img/files.png -p 0,15 -s 45x45}
+${voffset 25}${GOTO 50}${font}CPU
+${voffset 10}${GOTO 50}Threads: ${font Monofur:size=8}${running_threads}
+${voffset 5}${GOTO 50}${color3}${cpu cpu1}% ${cpubar cpu1 5,87} ${cpu cpu2}% ${cpubar cpu2 5,88}
+${GOTO 50}${cpu cpu3}% ${cpubar cpu3 5,87} ${cpu cpu4}% ${cpubar cpu4 5,88}
+${GOTO 50}${cpu cpu5}% ${cpubar cpu5 5,87} ${cpu cpu6}% ${cpubar cpu6 5,88}
+${GOTO 50}${cpu cpu7}% ${cpubar cpu7 5,87} ${cpu cpu8}% ${cpubar cpu8 5,88}
+${GOTO 50}${color1}Total: ${color3}${cpu cpu0}% ${cpubar cpu0 5,165}
+${voffset 10}${GOTO 50}${color1}${font}Temp: ${color0} ${font Monofur:size=8}${GOTO 95}${hwmon 0 temp 2}${color3}°C${GOTO 145}${color0}${hwmon 0 temp 3}${color3}°C${GOTO 195}${color0}${hwmon 0 temp 4}${color3}°C${GOTO 245}${color0}${hwmon 0 temp 5}${color3}°C
+${image ~/.conkyconfig/img/cpu.png -p 0,15 -s 45x45}

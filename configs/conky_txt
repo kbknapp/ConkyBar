@@ -15,7 +15,7 @@ double_buffer yes
 minimum_size 100 40
 maximum_width 1020
 gap_x 85
-gap_y 730
+gap_y 830
 
 #------------------------- FONT
 use_xft yes
@@ -31,7 +31,7 @@ uppercase no
 alignment top_left
 
 #------------------------- Colors
-default_color DCDCDC
+default_color C0C0C0
 color0 1793d0			#Special Color
 color1 DDDDDD
 color2 AAAAAA

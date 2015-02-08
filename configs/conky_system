@@ -15,7 +15,7 @@ double_buffer yes
 minimum_size 313 165
 maximum_width 313
 gap_x 70
-gap_y 150
+gap_y 50
 
 #------------------------- FONT
 use_xft yes
@@ -29,7 +29,7 @@ uppercase no
 
 #------------------------- Colors
 default_color DCDCDC 		#220 220 220	Gainsboro
-color0 1793d0			#Special Color
+color0 1793d0				#Special Color
 
 #------------------------- BORDERS
 draw_borders no
@@ -48,12 +48,11 @@ update_interval 1
 
 TEXT
 ${voffset 25}${GOTO 50}${font}System
-${GOTO 50}${font}Uptime: ${font Monofur:size=8}${uptime_short}${GOTO 175}(${color0}${exec ~/.conkyconfig/scripts/uptime.sh}${color})
-
-
-${font Monofur:size=8}${GOTO 50}${font}Processes: ${font Monofur:size=8}${processes} (${color0}${running_processes} ${color}running)
-${GOTO 50}${font}Threads: ${font Monofur:size=8}${running_threads}
-${GOTO 50}${font}Connections: ${font Monofur:size=8}${tcp_portmon 1 65535 count}
-
-${GOTO 50}${font}GPU: ${font Monofur:size=8}${nvidia temp}°C | ${font Monofur:size=8}${nvidia gpufreq}Ghz
+${voffset 5}${GOTO 50}${font}Uptime: ${font Monofur:size=8}${uptime_short}${GOTO 175}(${color0}${exec ~/.conkyconfig/scripts/uptime.sh}${color})
+${voffset 5}${GOTO 50}${font}Kernel: ${font Monofur:size=8}${kernel}${GOTO 175}
+${voffset 5}${font Monofur:size=8}${GOTO 50}${font}Processes: ${font Monofur:size=8}${processes} (${color0}${running_processes} ${color}running)
+${voffset 5}${GOTO 50}${font}Battery: ${font Monofur:size=8}${battery}%
+${voffset 10}${GOTO 50}${font}Music
+${GOTO 50}${font}Volume: ${font Monofur:size=8}${color0}${execi 5 ~/.conkyconfig/scripts/volume.sh}
+${if_match "${exec ~/.conkyconfig/scripts/volume.sh}"=="Muted"}${image ~/.conkyconfig/img/mute.png -p 0,110 -s 45x45}${else}${if_match "${exec ~/.conkyconfig/scripts/volume.sh}">"50"}${image ~/.conkyconfig/img/volumehigh.png -p 0,110 -s 45x45}${else}${image ~/.conkyconfig/img/volumemid.png -p 0,110 -s 45x45}${endif}${endif}
 ${image ~/.conkyconfig/img/system.png -p 0,15 -s 45x45}
