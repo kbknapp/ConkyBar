@@ -59,7 +59,7 @@ lua_draw_hook_post main
 
 TEXT
 ${voffset 25}${GOTO 50}${font}File System
-${voffset 5}${GOTO 50}${font}Available: ${font Monofur:size=8}${color2}${fs_size /}
+${voffset 5}${GOTO 50}${font}Available: ${font Monofur:size=8}${color2}${fs_size /} (${execi 3600 ~/.conkyconfig/scripts/fstype.sh})
 ${GOTO 50}${font}${color1}HDD: ${font Monofur:size=8}${color2}${fs_used /}${GOTO 200}${font}${color1}Temp: ${font Monofur:size=8}${color2}${hddtemp /dev/sda} °C
 ${voffset 55}
 ${GOTO 50}${font}Read: ${font Monofur:size=8}${diskio_read}${GOTO 200}${font}Write: ${font Monofur:size=8}${diskio_write}
