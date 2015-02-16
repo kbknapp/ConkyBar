@@ -48,11 +48,11 @@ update_interval 1
 
 TEXT
 ${voffset 25}${GOTO 50}${font}System
-${voffset 5}${GOTO 50}${font}Uptime: ${font Monofur:size=8}${uptime_short}${GOTO 175}(${color0}${exec ~/.conkyconfig/scripts/uptime.sh}${color})
+${voffset 5}${GOTO 50}${font}Uptime: ${font Monofur:size=8}${uptime_short}${GOTO 175}(${color0}${exec ~/.config/conky/scripts/uptime.sh}${color})
 ${voffset 5}${GOTO 50}${font}Kernel: ${font Monofur:size=8}${kernel}${GOTO 175}
 ${voffset 5}${font Monofur:size=8}${GOTO 50}${font}Processes: ${font Monofur:size=8}${processes} (${color0}${running_processes} ${color}running)
 ${voffset 5}${GOTO 50}${font}Battery: ${font Monofur:size=8}${battery}%
 ${voffset 10}${GOTO 50}${font}Music
-${GOTO 50}${font}Volume: ${font Monofur:size=8}${color0}${execi 5 ~/.conkyconfig/scripts/volume.sh}
-${if_match "${exec ~/.conkyconfig/scripts/volume.sh}"=="Muted"}${image ~/.conkyconfig/img/mute.png -p 0,110 -s 45x45}${else}${if_match "${exec ~/.conkyconfig/scripts/volume.sh}">"50"}${image ~/.conkyconfig/img/volumehigh.png -p 0,110 -s 45x45}${else}${image ~/.conkyconfig/img/volumemid.png -p 0,110 -s 45x45}${endif}${endif}
-${image ~/.conkyconfig/img/system.png -p 0,15 -s 45x45}
+${GOTO 50}${font}Volume: ${font Monofur:size=8}${color0}${execi 5 ~/.config/conky/scripts/volume.sh}
+${if_match "${exec ~/.config/conky/scripts/volume.sh}"=="Muted"}${image ~/.config/conky/img/mute.png -p 0,110 -s 45x45}${else}${if_match "${exec ~/.config/conky/scripts/volume.sh}">"50"}${image ~/.config/conky/img/volumehigh.png -p 0,110 -s 45x45}${else}${image ~/.config/conky/img/volumemid.png -p 0,110 -s 45x45}${endif}${endif}
+${image ~/.config/conky/img/system.png -p 0,15 -s 45x45}

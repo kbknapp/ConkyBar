@@ -60,4 +60,4 @@ ${GOTO 50}${cpu cpu5}% ${cpubar cpu5 5,87} ${cpu cpu6}% ${cpubar cpu6 5,88}
 ${GOTO 50}${cpu cpu7}% ${cpubar cpu7 5,87} ${cpu cpu8}% ${cpubar cpu8 5,88}
 ${GOTO 50}${color1}Total: ${color3}${cpu cpu0}% ${cpubar cpu0 5,165}
 ${voffset 10}${GOTO 50}${color1}${font}Temp: ${color0} ${font Monofur:size=8}${GOTO 95}${hwmon 0 temp 2}${color3}°C${GOTO 145}${color0}${hwmon 0 temp 3}${color3}°C${GOTO 195}${color0}${hwmon 0 temp 4}${color3}°C${GOTO 245}${color0}${hwmon 0 temp 5}${color3}°C
-${image ~/.conkyconfig/img/cpu.png -p 0,15 -s 45x45}
+${image ~/.config/conky/img/cpu.png -p 0,15 -s 45x45}

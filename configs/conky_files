@@ -52,15 +52,15 @@ use_spacer none
 update_interval 1
 
 #------------------------- LUA
-lua_load ~/.conkyconfig/lua/hdd_graph.lua
+lua_load ~/.config/conky/lua/hdd_graph.lua
 lua_draw_hook_pre main_graph
-lua_load ~/.conkyconfig/lua/files_ring_clock.lua
+lua_load ~/.config/conky/lua/files_ring_clock.lua
 lua_draw_hook_post main
 
 TEXT
 ${voffset 25}${GOTO 50}${font}File System
-${voffset 5}${GOTO 50}${font}Available: ${font Monofur:size=8}${color2}${fs_size /} (${execi 3600 ~/.conkyconfig/scripts/fstype.sh})
+${voffset 5}${GOTO 50}${font}Available: ${font Monofur:size=8}${color2}${fs_size /} (${execi 3600 ~/.config/conky/scripts/fstype.sh})
 ${GOTO 50}${font}${color1}HDD: ${font Monofur:size=8}${color2}${fs_used /}${GOTO 200}${font}${color1}Temp: ${font Monofur:size=8}${color2}${hddtemp /dev/sda} °C
 ${voffset 55}
 ${GOTO 50}${font}Read: ${font Monofur:size=8}${diskio_read}${GOTO 200}${font}Write: ${font Monofur:size=8}${diskio_write}
-${image ~/.conkyconfig/img/files.png -p 0,15 -s 45x45}
+${image ~/.config/conky/img/files.png -p 0,15 -s 45x45}

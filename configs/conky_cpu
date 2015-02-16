@@ -51,7 +51,7 @@ background no
 use_spacer none
 update_interval 1
 
-lua_load ~/.conkyconfig/lua/cpu_graph.lua
+lua_load ~/.config/conky/lua/cpu_graph.lua
 lua_draw_hook_pre main_graph
 
 TEXT
@@ -63,4 +63,4 @@ ${GOTO 50}${font Monofur:size=8}${color1}${top name 2}${GOTO 255}${top cpu 2}%
 ${GOTO 50}${font Monofur:size=8}${color2}${top name 3}${GOTO 255}${top cpu 3}%
 ${GOTO 50}${font Monofur:size=8}${color3}${top name 4}${GOTO 255}${top cpu 4}%
 ${GOTO 50}${font Monofur:size=8}${color3}${top name 5}${GOTO 255}${top cpu 5}%
-${image ~/.conkyconfig/img/cpu.png -p 0,15 -s 45x45}
+${image ~/.config/conky/img/cpu.png -p 0,15 -s 45x45}

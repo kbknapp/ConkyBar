@@ -1,12 +1,12 @@
 #!/bin/bash
 killall conky
-conky -c ~/.conkyconfig/configs/conky_bg &
-conky -p 1 -c ~/.conkyconfig/configs/conky_system &
-conky -p 2 -c ~/.conkyconfig/configs/conky_cpu &
-conky -p 3 -c ~/.conkyconfig/configs/conky_cpu2 &
-conky -p 4 -c ~/.conkyconfig/configs/conky_ram &
-conky -p 5 -c ~/.conkyconfig/configs/conky_files &
-conky -p 6 -c ~/.conkyconfig/configs/conky_network &
-conky -p 7 -c ~/.conkyconfig/configs/conky_clock &
-conky -p 8 -c ~/.conkyconfig/configs/conky_txt
+conky -c ~/.config/configs/conky_bg &
+conky -p 1 -c ~/.config/conky/configs/conky_system &
+conky -p 2 -c ~/.config/conky/configs/conky_cpu &
+conky -p 3 -c ~/.config/conky/configs/conky_cpu2 &
+conky -p 4 -c ~/.config/conky/configs/conky_ram &
+conky -p 5 -c ~/.config/conky/configs/conky_files &
+conky -p 6 -c ~/.config/conky/configs/conky_network &
+conky -p 7 -c ~/.config/conky/configs/conky_clock &
+conky -p 8 -c ~/.config/conky/configs/conky_txt
 exit

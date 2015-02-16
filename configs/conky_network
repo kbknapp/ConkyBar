@@ -49,7 +49,7 @@ background no
 use_spacer none
 update_interval 1
 
-lua_load ~/.conkyconfig/lua/net_graph.lua
+lua_load ~/.config/conky/lua/net_graph.lua
 lua_draw_hook_pre main_graph
 
 TEXT
@@ -58,7 +58,7 @@ ${if_existing /proc/net/route enp8s0}
 	${voffset 7}${GOTO 50}${font}Public ip: ${font Monofur:size=8}${texeci 3600 wget -qO - http://cfajohnson.com/ipaddr.cgi}
 	${GOTO 50}${font}TCP Connections: ${font Monofur:size=8}${tcp_portmon 1 65535 count}
 	${voffset 85}${GOTO 50}${font}Recieve: ${font Monofur:size=8}${downspeed enp8s0}${GOTO 200}${font}Send: ${font Monofur:size=8}${upspeed enp8s0}
-	${image ~/.conkyconfig/img/networklow.png -p 0,15 -s 45x45}
+	${image ~/.config/conky/img/networklow.png -p 0,15 -s 45x45}
 ${else}${if_existing /proc/net/route wlp7s0}
 	${voffset 25}${GOTO 50}${font}Network
 	${GOTO 50}${font}Public IP: ${font Monofur:size=8}${texeci 3600 wget -qO - http://cfajohnson.com/ipaddr.cgi}
@@ -67,9 +67,9 @@ ${else}${if_existing /proc/net/route wlp7s0}
 	${GOTO 50}${font}ESSID: ${font Monofur:size=8}${wireless_essid wlp7s0}${GOTO 220}${font}Signal: ${font Monofur:size=8}${wireless_link_qual_perc wlp7s0}%	
 	${GOTO 50}${downspeedgraph wlp7s0 45,120 1793D0 DDDDDD}${GOTO 180}${upspeedgraph wlp7s0 45,120 1793D0 DDDDDD}
 	${GOTO 50}${font}Rx: ${font Monofur:size=8}${downspeed wlp7s0}/${totaldown wlp7s0}${GOTO 185}${font}Tx: ${font Monofur:size=8}${upspeed wlp7s0}/${totalup wlp7s0}
-	${image ~/.conkyconfig/img/networkhigh.png -p 0,30 -s 45x45}
+	${image ~/.config/conky/img/networkhigh.png -p 0,30 -s 45x45}
 ${else}
 	${voffset 27}${GOTO 50}${font}Network
 	${GOTO 50}${font}No connection
-	${image ~/.conkyconfig/img/nonetwork.png -p 0,15 -s 45x45}
+	${image ~/.config/conky/img/nonetwork.png -p 0,15 -s 45x45}
 ${endif}

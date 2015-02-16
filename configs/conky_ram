@@ -63,4 +63,4 @@ ${GOTO 50}${font Monofur:size=8}${color2}${top_mem name 3}${GOTO 200}${top_mem m
 ${GOTO 50}${font Monofur:size=8}${color3}${top_mem name 4}${GOTO 200}${top_mem mem 4}%${GOTO 255}${top_mem mem_vsize 4}
 ${GOTO 50}${font Monofur:size=8}${color3}${top_mem name 5}${GOTO 200}${top_mem mem 5}%${GOTO 255}${top_mem mem_vsize 5}
 #${GOTO 50}${font Monofur:size=8}${color3}${top_mem name 5}${GOTO 200}${top_mem mem 5}%${GOTO 255}${top_mem mem_res 1}
-${image ~/.conkyconfig/img/ram.png -p 0,15 -s 45x45}
+${image ~/.config/conky/img/ram.png -p 0,15 -s 45x45}

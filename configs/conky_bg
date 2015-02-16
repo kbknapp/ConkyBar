@@ -35,4 +35,4 @@ background yes
 update_interval 3600
 
 TEXT
-${image ~/.conkyconfig/img/bg.png -p 0,0 -s 1920x165}
+${image ~/.config/conky/img/bg.png -p 0,0 -s 1920x165}
