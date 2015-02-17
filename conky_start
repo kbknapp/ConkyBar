@@ -1,6 +1,6 @@
 #!/bin/bash
 killall conky
-conky -c ~/.config/configs/conky_bg &
+conky -c ~/.config/conky/configs/conky_bg &
 conky -p 1 -c ~/.config/conky/configs/conky_system &
 conky -p 2 -c ~/.config/conky/configs/conky_cpu &
 conky -p 3 -c ~/.config/conky/configs/conky_cpu2 &
