@@ -57,10 +57,10 @@ ${voffset 5}${GOTO 50}${font}Available: ${font Monofur:size=8}${memmax}
 ${GOTO 50}${font}Usage: ${font Monofur:size=8}${memperc}%  | ${mem}${font Monofur:size=7}          (+${buffers} +${cached})
 ${voffset 5}${GOTO 50}${color3}${membar 5,250}
 
-${GOTO 50}${font Monofur:size=8}${color0}${top_mem name 1}${GOTO 200}${top_mem mem 1}%${GOTO 255}${top_mem mem_vsize 1}
-${GOTO 50}${font Monofur:size=8}${color1}${top_mem name 2}${GOTO 200}${top_mem mem 2}%${GOTO 255}${top_mem mem_vsize 2}
-${GOTO 50}${font Monofur:size=8}${color2}${top_mem name 3}${GOTO 200}${top_mem mem 3}%${GOTO 255}${top_mem mem_vsize 3}
-${GOTO 50}${font Monofur:size=8}${color3}${top_mem name 4}${GOTO 200}${top_mem mem 4}%${GOTO 255}${top_mem mem_vsize 4}
-${GOTO 50}${font Monofur:size=8}${color3}${top_mem name 5}${GOTO 200}${top_mem mem 5}%${GOTO 255}${top_mem mem_vsize 5}
+${GOTO 50}${font Monofur:size=8}${color0}${top_mem name 1}${GOTO 200}${top_mem mem 1}%${GOTO 255}${top_mem mem_res 1}
+${GOTO 50}${font Monofur:size=8}${color1}${top_mem name 2}${GOTO 200}${top_mem mem 2}%${GOTO 255}${top_mem mem_res 2}
+${GOTO 50}${font Monofur:size=8}${color2}${top_mem name 3}${GOTO 200}${top_mem mem 3}%${GOTO 255}${top_mem mem_res 3}
+${GOTO 50}${font Monofur:size=8}${color3}${top_mem name 4}${GOTO 200}${top_mem mem 4}%${GOTO 255}${top_mem mem_res 4}
+${GOTO 50}${font Monofur:size=8}${color3}${top_mem name 5}${GOTO 200}${top_mem mem 5}%${GOTO 255}${top_mem mem_res 5}
 #${GOTO 50}${font Monofur:size=8}${color3}${top_mem name 5}${GOTO 200}${top_mem mem 5}%${GOTO 255}${top_mem mem_res 1}
 ${image ~/.config/conky/img/ram.png -p 0,15 -s 45x45}
